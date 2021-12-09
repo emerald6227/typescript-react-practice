@@ -22,10 +22,10 @@ interface CircleProps { // Circle 컴포넌트의 props객체 인터페이스
 }
 
 function Circle({bgColor, borderColor, text = "default text"}: CircleProps) { // props를 객체타입으로 지정
-    // const [counter, setCounter] = useState(1); // number만 허용됨 (기본폼)
-    const [counter, setCounter] = useState<number|boolean>(1); // 2개 이상 타입을 원할 때
-    setCounter(2); // number 가능
-    setCounter(true); // boolean도 허용했음
+    const [counter, setCounter] = useState(1); // number만 허용됨 (기본폼)
+    // const [counter, setCounter] = useState<number|boolean>(1); // 2개 이상 타입을 원할 때
+    setCounter(2); // number 타입을 기본값으로 했음
+    // setCounter(true); // <number|boolean> 추가하면 이 것도 가능함
     // setCounter("string"); // !에러발생!
 
     return (

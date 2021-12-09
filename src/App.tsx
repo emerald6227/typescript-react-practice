@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import Circle from "./Circle";
+
+const Container = styled.div`
+  background-color: ${(props) => props.theme.bgColor};
+`;
+const H1 = styled.h1`
+  color: ${(props) => props.theme.textColor};
+`;
 
 function App() {
   const [value, setValue] = useState("");
@@ -23,6 +31,10 @@ function App() {
         <input value={value} onChange={onChange} type="text" placeholder="username" />
         <button>Log in</button>
       </form>
+
+      <Container>
+        <H1>다크테마가 적용된 h1</H1>
+      </Container>
     </div>
   );
 }
